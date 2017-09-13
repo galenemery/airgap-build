@@ -19,4 +19,9 @@ cookbook_file '/etc/hosts' do
   mode 0644
 end
 
+cookbook_file '/var/opt/delivery/workspace/.ssh/known_hosts' do
+  source 'known_hosts'
+  mode 0644
+end
+
 include_recipe 'delivery-truck::default'
