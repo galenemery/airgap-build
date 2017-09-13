@@ -1,15 +1,19 @@
 {
   "version": "2",
   "build_cookbook": {
-    "name": "build_cookbook",
-    "path": ".delivery/build_cookbook"
+    "name": "airgap-build",
+    "path": "."
   },
   "delivery-truck": {
     "lint": {
       "enable_cookstyle": true
     }
   },
-  "skip_phases": [],
+  "skip_phases": [
+    "provision",
+    "smoke",
+    "functional"
+  ],
   "job_dispatch": {
     "version": "v2"
   },
