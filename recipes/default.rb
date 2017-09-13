@@ -14,4 +14,9 @@ cookbook_file '/var/opt/delivery/workspace/.ssh/galen_sa_west_2.pem' do
   owner 'dbuild'
 end
 
+cookbook_file '/etc/hosts' do
+  source 'hosts'
+  mode 0644
+end
+
 include_recipe 'delivery-truck::default'
