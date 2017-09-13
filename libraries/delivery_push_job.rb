@@ -63,7 +63,7 @@ module DeliverySugar
     #
     def dispatch
       @nodes.each do |node|
-        conn = Train.create('ssh', host: node, port: 22, user: 'ec2-user', key_files: '/var/opt/delivery/workspace/.ssh/galen_sa_west_2.pem').connection
+        conn = Train.create('ssh', host: node, port: 22, sudo: true, user: 'ec2-user', key_files: '/var/opt/delivery/workspace/.ssh/galen_sa_west_2.pem').connection
         result = conn.run_command(@command)
         (result.exit_status.eql?(0) ? @results['succeeded'] << node : @results['failed'] << node)
         puts result.stdout
