@@ -10,7 +10,7 @@ end
 
 cookbook_file '/var/opt/delivery/workspace/.ssh/galen_sa_west_2.pem' do
   source 'galen_sa_west_2.pem'
-  mode 0400
+  mode 0600
   owner 'dbuild'
 end
 
