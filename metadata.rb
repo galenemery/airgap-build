@@ -1,9 +1,9 @@
 name 'airgap-build'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
-license 'All Rights Reserved'
-description 'Installs/Configures airgap-build'
-long_description 'Installs/Configures airgap-build'
+maintainer 'Galen Emery'
+maintainer_email 'galen@chef.io'
+license 'Apache2'
+description 'An airgap capable build cookbook for Chef Workflow'
+long_description 'An airgap capable build cookbook for Chef Workflow'
 version '0.1.10'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 

@@ -8,11 +8,12 @@ directory '/var/opt/delivery/workspace/.ssh' do
   owner 'dbuild'
 end
 
-cookbook_file '/var/opt/delivery/workspace/.ssh/galen_sa_west_2.pem' do
-  source 'galen_sa_west_2.pem'
-  mode 0644
-  owner 'dbuild'
-end
+# The following resource is to setup the ssh key for the runner to be able to perform the deploy task.
+#cookbook_file '/var/opt/delivery/workspace/.ssh/galen_sa_west_2.pem' do
+#  source 'galen_sa_west_2.pem'
+#  mode 0644
+#  owner 'dbuild'
+#end
 
 cookbook_file '/etc/hosts' do
   source 'hosts'
